@@ -11,10 +11,10 @@ namespace DogeCloud.CSharp
     /// </summary>
     public class DogeRequest
     {
-        public DogeRequest(DogeCloudModel doge) {
+        public DogeRequest(DogeCloudKey doge) {
             _doge = doge;
         }
-        public static DogeCloudModel _doge;
+        public static DogeCloudKey _doge;
         public string Request(string ApiPath, string accessToken, string body = null)
         {
             
@@ -41,7 +41,6 @@ namespace DogeCloud.CSharp
                     body += $"{item}";
                 }
             }
-            Console.WriteLine(body);
             return body;
         }
         public static string CDNQueryCode(string apiPath,CDNQuery query)

@@ -13,10 +13,11 @@ namespace DogeCloud.CSharp
         static void Main(string[] args)
         {
             var query = new CDNQuery();
-            var key = new DogeCloudModel();
-            key.access_key = "05e3988ad6c7dede";
-            key.secret_key = "72fd815d799f6611ea88ecea810ca01c";
+            var key = new DogeCloudKey();
+            key.access_key = "You access_key";
+            key.secret_key = "You secret_key";
             var reques = new DogeRequest(key);
+
             Console.WriteLine(reques.CDNStats(query));
         }
     }
